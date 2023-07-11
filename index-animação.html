@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head class="Mapa">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@keyframes blink {
+  0%, 49.9% { background-color: red; }
+  50%, 100% { background-color: green; }
+}
+
+body {  
+  animation: blink 6s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mensagem-vermelha, .mensagem-verde {
+  text-align: center;
+  display: none;
+  color: yellow;
+  font-size: 50px;
+}
+
+.mensagem-vermelha.active, .mensagem-verde.active {
+  display: block;
+}
+</style>
+</head>
+<body>
+  <div class="mensagem-vermelha">Sinais altos de movimentação humana e de máquinas não identificados ⚠️</div>
+  <div class="mensagem-verde">Sinais altos de movimentação humana e de máquinas identificados</div>
+
+  <script>
+    window.addEventListener('load', function() {
+      const mensagemVermelha = document.querySelector('.mensagem-vermelha');
+      const mensagemVerde = document.querySelector('.mensagem-verde');
+      
+      function alternarTextos() {
+        if (mensagemVermelha.classList.contains('active')) {
+          mensagemVermelha.classList.remove('active');
+          mensagemVerde.classList.add('active');
+        } else {
+          mensagemVerde.classList.remove('active');
+          mensagemVermelha.classList.add('active');
+        }
+      }
+      
+      setInterval(alternarTextos, 3000);
+      alternarTextos(); // Exibe o primeiro texto ao carregar a página
+    });
+  </script>
+</body>
+</html>
