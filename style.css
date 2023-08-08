@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+.texto2{
+  margin-left: -1000px;
+  margin-top: 10px;
+  background-color: #538d22;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.texto2 #topo{
+  color: red;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -19,10 +29,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ffff;
+  background-color: white;
+}
+.container #texto1{
+  margin-top: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 #svg-map {
+  margin-top: -180px;
   width: 90vw;
   height: 80vh;
   filter: drop-shadow(0 0 0.75rem #999);
@@ -297,3 +313,4 @@ body {
     opacity: 1;
   }
 }
+
